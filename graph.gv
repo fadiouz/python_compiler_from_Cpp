@@ -1,0 +1,71 @@
+digraph G {
+	MyProgram [label="DeclareProg : MyProgram"]
+	MyProgram -> Statements;
+	Statements [label="StatementsProgram"]
+	Statements -> my_decorator_func;
+	my_decorator_func [label="Declare Fun : my_decorator_func"]
+	my_decorator_func -> args2;
+	args2 [label="Args"]
+	args2 -> arg10;
+	arg10 [label="Argument"]
+	my_decorator_func -> funstmt8;
+	funstmt8 [label="Function-Statements"]
+	funstmt8 -> wrapper_func;
+	wrapper_func [label="Declare Fun : wrapper_func"]
+	wrapper_func -> args3;
+	args3 [label="Args"]
+	wrapper_func -> funstmt6;
+	funstmt6 [label="Function-Statements"]
+	funstmt6 -> func;
+	func [label="Function Call"]
+	func -> args4;
+	args4 [label="Args"]
+	funstmt8 -> return29;
+	return29 [label="Return"]
+	return29 -> ident4;
+	ident4 [shape=box,label="Identifier: wrapper_func"]
+	Statements -> my_func;
+	my_func [label="Declare Fun : my_func"]
+	my_func -> args12;
+	args12 [label="Args"]
+	my_func -> funstmt13;
+	funstmt13 [label="Function-Statements"]
+	funstmt13 -> passs0;
+	passs0 [label="Pass"]
+	Statements -> example_function;
+	example_function [label="Declare Fun : example_function"]
+	example_function -> args17;
+	args17 [label="Args"]
+	args17 -> arg115;
+	arg115 [label="Argument"]
+	args17 -> arg118;
+	arg118 [label="Argument"]
+	example_function -> funstmt20;
+	funstmt20 [label="Function-Statements"]
+	funstmt20 -> passs1;
+	passs1 [label="Pass"]
+	Statements -> ExampleClass;
+	ExampleClass [label="Declare Class : ExampleClass"]
+	ExampleClass -> cls27;
+	cls27 [label="Class Statements"]
+	cls27 -> __init__;
+	__init__ [label="Declare Fun : __init__"]
+	__init__ -> args24;
+	args24 [label="Args"]
+	args24 -> arg122;
+	arg122 [label="Argument"]
+	__init__ -> funstmt25;
+	funstmt25 [label="Function-Statements"]
+	funstmt25 -> passs2;
+	passs2 [label="Pass"]
+	cls27 -> example_method;
+	example_method [label="Declare Fun : example_method"]
+	example_method -> args30;
+	args30 [label="Args"]
+	args30 -> arg128;
+	arg128 [label="Argument"]
+	example_method -> funstmt31;
+	funstmt31 [label="Function-Statements"]
+	funstmt31 -> passs3;
+	passs3 [label="Pass"]
+}

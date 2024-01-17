@@ -1,0 +1,5 @@
+win_bison –o -d parser.cpp parser.y
+win_flex -o flex.cpp flex.l
+g++ ast.cpp flex.cpp parser.cpp -o app
+app.exe < input.py > input.gv
+dot -Tpng -oinput.png input.gv
